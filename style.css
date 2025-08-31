@@ -29,11 +29,9 @@ body{
 
 /* ✅ Logo ajustado */
 .nav img{
-  height:40px;
+  height:60px;
   width:auto;
   display:block;
-  background:#0b0b0f;   /* asegura fondo negro si el logo es transparente */
-  border-radius:6px;    /* opcional, suaviza esquinas */
 }
 
 .nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
@@ -74,5 +72,5 @@ h1{font-size: clamp(34px, 6vw, 56px); line-height:1.1; margin:0 0 16px; color:va
 /* ✅ Responsive */
 @media (max-width:900px){
   .grid-3{grid-template-columns:1fr}
-  .nav img{height:28px}
+  .nav img{height:40px}
 }
