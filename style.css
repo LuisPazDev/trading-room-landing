@@ -34,7 +34,7 @@ body{
 /* ✅ Logo tamaño mockup */
 .nav img.logo{
   height:200px;   /* tamaño en desktop */
-  width: 300px;
+  width: 350px;
   display:block;
 }
 
