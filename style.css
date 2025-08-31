@@ -9,9 +9,9 @@
   --purple-600:#6d28d9;
   --outline:#2a2a35;
 
-  /* ✅ Tamaño del logo controlado por variables */
-  --logo-h-desktop: 250px;   /* ajusta 104–136 según gusto */
-  --logo-h-mobile:  100px;    /* para pantallas pequeñas */
+  /* ✅ Tamaños del logo */
+  --logo-h-desktop: 144px;
+  --logo-h-mobile: 72px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -25,21 +25,23 @@ body{
 /* Navbar */
 .nav{
   display:flex; align-items:center; justify-content:space-between;
-  padding:16px 0;                       /* espacio vertical amable */
+  padding:24px 0; /* más aire para el logo */
   border-bottom:1px solid rgba(255,255,255,.06);
   position:sticky; top:0; z-index:10;
   background:rgba(11,11,15,.72); backdrop-filter:blur(8px);
 }
+.nav.container{
+  max-width:1440px; /* navbar más ancha para dar espacio al logo */
+}
 .nav .brand{display:flex; align-items:center}
 
-/* ✅ Logo correcto: solo altura, mantiene proporción */
+/* ✅ Logo correcto: controla altura con variables */
 .nav img.logo{
   height:var(--logo-h-desktop);
   width:auto;
   display:block;
 }
 
-/* Links navbar */
 .nav a{color:var(--muted); text-decoration:none; margin-left:20px; font-size:14px}
 .nav a:hover{color:var(--text)}
 
