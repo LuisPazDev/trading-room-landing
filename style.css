@@ -1,11 +1,11 @@
 /* Base styles for EL TRADING ROOM landing — dark + purple accents */
 :root{
-  --bg:#0b0b0f;
+  --bg: #0b0b0f;
   --card:#121218;
   --muted:#a8a8b3;
   --text:#e9e9ef;
   --heading:#f2f2f7;
-  --purple:#7c3aed;
+  --purple:#7c3aed; /* primary */
   --purple-600:#6d28d9;
   --outline:#2a2a35;
 }
@@ -13,74 +13,71 @@
 html,body{margin:0;padding:0}
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
-  background:var(--bg); color:var(--text); line-height:1.6;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
 /* Navbar */
 .nav{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:12px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;
   border-bottom:1px solid rgba(255,255,255,.06);
-  position:sticky; top:0; z-index:10;
-  background:rgba(11,11,15,.72); backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:10;
+  background:rgba(11,11,15,.72);backdrop-filter:blur(8px);
 }
-.nav .brand{display:flex; align-items:center; gap:12px}
+.nav .brand{display:flex;align-items:center}
 
-/* ✅ Logo como en el mockup: sin fondo, más grande, nítido */
+/* ✅ Logo tamaño mockup */
 .nav img.logo{
-  height:56px;      /* ajusta a 56–64 si lo quieres aún más grande */
-  width:auto; display:block;
-  image-rendering:auto; /* mejor calidad */
-  filter:none;          /* sin filtros raros */
-  background:transparent; /* por si algún estilo previo quedaba */
-  border-radius:0;        /* sin caja */
+  height:72px;   /* tamaño en desktop */
+  width:auto;
+  display:block;
 }
 
-.nav a{color:var(--muted); text-decoration:none; margin-left:20px; font-size:14px}
+.nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
 .nav a:hover{color:var(--text)}
 
-/* Hero */
 .hero{padding:64px 0}
-h1{font-size:clamp(34px,6vw,56px); line-height:1.1; margin:0 0 16px; color:var(--heading)}
-.lead{color:var(--muted); max-width:840px; font-size:clamp(16px,2.5vw,18px)}
+h1{font-size: clamp(34px, 6vw, 56px); line-height:1.1; margin:0 0 16px; color:var(--heading)}
+.lead{color:var(--muted); max-width: 840px; font-size: clamp(16px, 2.5vw, 18px)}
 
-/* Botones */
 .btns{display:flex; gap:14px; margin-top:22px; flex-wrap:wrap}
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   padding:12px 18px; border-radius:12px; border:1px solid var(--outline);
-  background:transparent; color:var(--text); text-decoration:none; font-weight:600;
+  background: transparent; color: var(--text); text-decoration:none; font-weight:600;
 }
-.btn--primary{background:var(--purple); border-color:transparent; color:#fff}
-.btn--primary:hover{background:var(--purple-600)}
+.btn--primary{background: var(--purple); border-color: transparent; color:white}
+.btn--primary:hover{background: var(--purple-600)}
 .btn--ghost:hover{border-color:#3a3a46}
 
-/* Secciones */
-.section{padding:48px 0; border-top:1px solid rgba(255,255,255,.06)}
-.section h2{font-size:clamp(24px,4vw,34px); margin:0 0 18px; color:var(--heading)}
-.bullets{padding-left:18px; color:var(--text)}
+.section{padding:48px 0; border-top: 1px solid rgba(255,255,255,.06)}
+.section h2{font-size: clamp(24px, 4vw, 34px); margin:0 0 18px; color:var(--heading)}
+.bullets{padding-left:18px;color:var(--text)}
 .bullets li{margin:6px 0}
 
-.grid-3{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
+.grid-3{display:grid; gap:16px; grid-template-columns: repeat(3, 1fr)}
 .card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px}
 .card h3{margin:0 0 6px}
-.card p{margin:0; color:var(--muted)}
-.note{color:var(--muted); max-width:900px}
+.card p{margin:0;color:var(--muted)}
 
-/* Footer */
-.footer{
-  padding:28px 0; border-top:1px solid rgba(255,255,255,.06);
-  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px
-}
+.note{color:var(--muted); max-width: 900px}
+
+.footer{padding:28px 0; border-top:1px solid rgba(255,255,255,.06); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px}
 .footer small{color:var(--muted)}
 .social{display:flex; gap:12px}
 .social a{color:var(--muted); text-decoration:none}
 .social a:hover{color:var(--text)}
 
-/* Responsive */
 @media (max-width:900px){
   .grid-3{grid-template-columns:1fr}
-  .nav img.logo{height:40px}
+
+  /* ✅ Logo tamaño móvil */
+  .nav img.logo{
+    height:48px;
+  }
 }
