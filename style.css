@@ -9,7 +9,7 @@
   --purple-600:#6d28d9;
   --outline:#2a2a35;
 
-  /* ✅ Tamaños del logo */
+  /* Tamaños del logo */
   --logo-h-desktop: 144px;
   --logo-h-mobile: 72px;
 }
@@ -25,24 +25,40 @@ body{
 /* Navbar */
 .nav{
   display:flex; align-items:center; justify-content:space-between;
-  padding:24px 0; /* más aire para el logo */
+  padding:24px 0;
   border-bottom:1px solid rgba(255,255,255,.06);
   position:sticky; top:0; z-index:10;
   background:rgba(11,11,15,.72); backdrop-filter:blur(8px);
+  gap: 20px;
 }
 .nav.container{
-  max-width:1440px; /* navbar más ancha para dar espacio al logo */
+  max-width:1440px;
 }
 .nav .brand{display:flex; align-items:center}
 
-/* ✅ Logo correcto: controla altura con variables */
+/* Logo */
 .nav img.logo{
   height:var(--logo-h-desktop);
   width:auto;
   display:block;
 }
 
-.nav a{color:var(--muted); text-decoration:none; margin-left:20px; font-size:14px}
+/* ✅ Tagline */
+.nav-tagline h1 {
+  font-size: 28px;
+  margin: 0;
+  color: var(--heading);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Links navbar */
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.nav a{color:var(--muted); text-decoration:none; font-size:14px}
 .nav a:hover{color:var(--text)}
 
 /* Hero */
@@ -84,8 +100,11 @@ h1{font-size:clamp(34px,6vw,56px); line-height:1.1; margin:0 0 16px; color:var(-
 .social a{color:var(--muted); text-decoration:none}
 .social a:hover{color:var(--text)}
 
-/* ✅ Responsive */
+/* Responsive */
 @media (max-width:900px){
   .grid-3{grid-template-columns:1fr}
+
+  .nav{flex-wrap:wrap; justify-content:center; text-align:center}
+  .nav-tagline h1{font-size:18px; white-space:normal}
   .nav img.logo{height:var(--logo-h-mobile)}
 }

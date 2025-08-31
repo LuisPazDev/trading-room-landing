@@ -14,17 +14,23 @@
 <body>
   <nav class="nav container" role="navigation" aria-label="Principal">
     <a class="brand" href="/">
-      <!-- ✅ Logo actualizado con cache-bust -->
       <img class="logo" src="./assets/logo.png?v=6" alt="El Trading Room" />
     </a>
-    <div>
+
+    <!-- ✅ Tagline en la navbar -->
+    <div class="nav-tagline">
+      <h1>Aprende Trading sin Arriesgar tu Dinero</h1>
+    </div>
+
+    <!-- Links -->
+    <div class="nav-links">
       <a href="#enfoque">Enfoque</a>
       <a href="#comunidad">Comunidad</a>
     </div>
   </nav>
 
   <header class="hero container">
-    <h1>Aprende a operar sin arriegar tu dinero</h1>
+    <!-- Quitamos el H1 repetido -->
     <p class="lead">
       Somos una comunidad de trading enfocada en que el trader aprenda a operar en el mercado de Futuros sin necesidad de arriesgar su dinero, por lo que nos enfocamos 100% en operar con empresas de Fondeo, lo esencial — precio, VWAP y zonas clave — sin poner en juego tus ahorros.
       Primero demuestras que sabes operar y luego puedes operar con capital de fondeo. 
@@ -51,15 +57,24 @@
     <h2>Nuestro enfoque educativo</h2>
     <div class="grid-3">
       <div class="card">
-        <h3 style="display:flex;align-items:center;gap:10px"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="4" height="14" rx="1"></rect><rect x="10" y="7" width="4" height="10" rx="1"></rect><rect x="17" y="5" width="4" height="12" rx="1"></rect></svg> <span>Observa el precio</span></h3>
+        <h3 style="display:flex;align-items:center;gap:10px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="4" height="14" rx="1"></rect><rect x="10" y="7" width="4" height="10" rx="1"></rect><rect x="17" y="5" width="4" height="12" rx="1"></rect></svg> 
+          <span>Observa el precio</span>
+        </h3>
         <p>Aprende la historia que el mercado cuenta con sus velas y rangos.</p>
       </div>
       <div class="card">
-        <h3 style="display:flex;align-items:center;gap:10px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 15c2 0 3-6 6-6s4 8 7 8 3-10 5-10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> <span>VWAP</span></h3>
+        <h3 style="display:flex;align-items:center;gap:10px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 15c2 0 3-6 6-6s4 8 7 8 3-10 5-10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> 
+          <span>VWAP</span>
+        </h3>
         <p>La zona donde suele concentrarse el dinero grande. Úsala como guía.</p>
       </div>
       <div class="card">
-        <h3 style="display:flex;align-items:center;gap:10px"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c3 6 6 8 6 11a6 6 0 1 1-12 0c0-3 3-5 6-11z"/></svg> <span>Liquidez</span></h3>
+        <h3 style="display:flex;align-items:center;gap:10px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c3 6 6 8 6 11a6 6 0 1 1-12 0c0-3 3-5 6-11z"/></svg> 
+          <span>Liquidez</span>
+        </h3>
         <p>Zonas donde el precio suele reaccionar. Aprende a identificarlas.</p>
       </div>
     </div>
