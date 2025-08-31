@@ -11,7 +11,7 @@
 
   /* ✅ Tamaño del logo controlado por variables */
   --logo-h-desktop: 250px;   /* ajusta 104–136 según gusto */
-  --logo-h-mobile:  56px;    /* para pantallas pequeñas */
+  --logo-h-mobile:  100px;    /* para pantallas pequeñas */
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
