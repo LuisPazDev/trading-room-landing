@@ -26,7 +26,16 @@ body{
   position:sticky;top:0;background:rgba(11,11,15,.7);backdrop-filter: blur(8px);z-index:10;
 }
 .nav .brand{display:flex;gap:12px;align-items:center}
-.nav img{height:32px}
+
+/* ✅ Logo ajustado */
+.nav img{
+  height:40px;
+  width:auto;
+  display:block;
+  background:#0b0b0f;   /* asegura fondo negro si el logo es transparente */
+  border-radius:6px;    /* opcional, suaviza esquinas */
+}
+
 .nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
 .nav a:hover{color:var(--text)}
 
@@ -62,6 +71,8 @@ h1{font-size: clamp(34px, 6vw, 56px); line-height:1.1; margin:0 0 16px; color:va
 .social a{color:var(--muted); text-decoration:none}
 .social a:hover{color:var(--text)}
 
+/* ✅ Responsive */
 @media (max-width:900px){
   .grid-3{grid-template-columns:1fr}
+  .nav img{height:28px}
 }
